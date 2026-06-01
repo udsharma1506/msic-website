@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Outer ring gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a2a5e"/>
+      <stop offset="100%" stop-color="#0d1b40"/>
+    </linearGradient>
+    <!-- Orange accent gradient -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59c1a"/>
+      <stop offset="100%" stop-color="#e07b00"/>
+    </linearGradient>
+    <!-- Inner fill -->
+    <radialGradient id="innerGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#243680"/>
+      <stop offset="100%" stop-color="#0d1b40"/>
+    </radialGradient>
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="98" fill="url(#ringGrad)" filter="url(#shadow)"/>
+
+  <!-- Orange accent ring stripe -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="url(#orangeGrad)" stroke-width="5"/>
+
+  <!-- Inner circle (background field) -->
+  <circle cx="100" cy="100" r="86" fill="url(#innerGrad)"/>
+
+  <!-- Thin inner border -->
+  <circle cx="100" cy="100" r="86" fill="none" stroke="#f59c1a" stroke-width="1.5" stroke-opacity="0.6"/>
+
+  <!-- Central emblem: flame y=47–76, handle y=76–86, book y=85–119, text y=143, sub y=160 -->
+  <!-- Book base -->
+  <rect x="76" y="85" width="48" height="34" rx="3" fill="none" stroke="#f59c1a" stroke-width="2"/>
+  <line x1="100" y1="85" x2="100" y2="119" stroke="#f59c1a" stroke-width="1.5"/>
+  <!-- Pages curl effect -->
+  <path d="M 76 88 Q 88 83 100 88" fill="none" stroke="#f59c1a" stroke-width="1.5"/>
+  <path d="M 100 88 Q 112 83 124 88" fill="none" stroke="#f59c1a" stroke-width="1.5"/>
+  <!-- Torch flame above book -->
+  <path d="M 100 47 C 96 55 91 60 92 67 C 93 73 100 76 100 76 C 100 76 107 73 108 67 C 109 60 104 55 100 47 Z"
+        fill="url(#orangeGrad)"/>
+  <!-- Flame inner -->
+  <path d="M 100 54 C 98 59 96 63 97 67 C 98 70 100 72 100 72 C 100 72 102 70 103 67 C 104 63 102 59 100 54 Z"
+        fill="#fff5cc" opacity="0.7"/>
+  <!-- Torch handle -->
+  <rect x="97" y="76" width="6" height="10" rx="1" fill="#f59c1a"/>
+
+  <!-- MSIC main text -->
+  <text x="100" y="143"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="22"
+        font-weight="700"
+        letter-spacing="5"
+        fill="#ffffff"
+        text-anchor="middle">MSIC</text>
+
+  <!-- Divider line with dots -->
+  <line x1="55" y1="149" x2="145" y2="149" stroke="#f59c1a" stroke-width="0.8" opacity="0.7"/>
+  <circle cx="100" cy="149" r="2" fill="#f59c1a"/>
+
+  <!-- Sub text -->
+  <text x="100" y="160"
+        font-family="Arial, sans-serif"
+        font-size="6.5"
+        letter-spacing="1.5"
+        fill="#c8d4f0"
+        text-anchor="middle">INSTITUTE OF COMMERCE</text>
+
+  <!-- Stars / decorative dots -->
+  <circle cx="62" cy="149" r="1.5" fill="#f59c1a" opacity="0.7"/>
+  <circle cx="138" cy="149" r="1.5" fill="#f59c1a" opacity="0.7"/>
+</svg>
